@@ -1,6 +1,21 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  
+	describe "Contact page" do
+
+		it "Should have the word 'Contact'" do
+			visit '/static_pages/contact'
+			expect(page).to have_content('Contact')
+		end
+
+		it "Should have the title" do
+			visit '/static_pages/contact'
+			expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
+		end
+
+	end
+
   describe "Home page" do
   
     it "should have the content 'Sample App'" do

@@ -3,9 +3,17 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+#Rspec Guard Addition
+require 'rbconfig'
+gem 'wdm', '>= 0.1.0'
+
 group :development, :test do
 	gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec', '2.5.0'
+	gem 'spork-rails', '4.0.0'
+	gem 'guard-spork', '1.5.1'
+	gem 'childprocess', '0.4.0'
 end
 
 group :test do
